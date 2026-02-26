@@ -1,16 +1,16 @@
 services:
-  app:
-    build: .
-    container_name: python_app
-    # ローカルの変更を即時反映させるための設定
-    volumes:
-      - ./workspace:/workspace
-    # コンテナがすぐに終了しないように、標準入出力などを有効にする（デバッグ用）
-    tty: true
-    stdin_open: true
-    # 環境変数が必要な場合はここに追加
-    environment:
-      - PYTHONUNBUFFERED=1
+  app:
+    build: .
+    container_name: python_app
 
-    ports:
-      - "****:8000"
+    volumes:
+      - ./workspace:/workspace
+
+    tty: true
+    stdin_open: true
+    # 環境変数が必要な場合はここに追加
+    environment:
+      - PYTHONUNBUFFERED=1
+
+    ports:
+      - "28085:8000"
