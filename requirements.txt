@@ -1,0 +1,22 @@
+# --- Web Framework ---
+fastapi
+uvicorn[standard]
+python-multipart  # ファイルアップロード等に必要
+pydantic
+
+# --- Data Science / Analytics ---
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+
+# --- Image / Audio Processing ---
+opencv-python-headless  # GUI不要のコンテナ向けOpenCV
+Pillow
+praat-parselmouth        # 以前のやり取りにあった研究室用パッケージ
+
+# --- Utilities ---
+requests
+tqdm
+python-dotenv
