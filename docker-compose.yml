@@ -1,16 +1,23 @@
 services:
   app:
     build: .
-    container_name: python_app
+
+    # container_nameを独自のものに変更する
+    container_name: python_app_****
+
+    # 追加
+    command: /bin/bash
 
     volumes:
       - ./workspace:/workspace
 
     tty: true
     stdin_open: true
+
     # 環境変数が必要な場合はここに追加
     environment:
       - PYTHONUNBUFFERED=1
 
     ports:
-      - "28085:8000"
+      # 独自のポート番号に変更
+      - "****:8000"
